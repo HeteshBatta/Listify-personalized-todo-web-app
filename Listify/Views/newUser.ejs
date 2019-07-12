@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Listify</title>
+</head>
+<style>
+#bg{
+  background-color: #EAF0F1;
+  font-family : "Comic Sans MS";
+  font-size : 13px;
+  color : grey;
+}
+#heading{
+  margin-left: 345px;
+    font-size: 60px;
+    font-family: Helvetica;
+}
+#maindiv{
+  height: 303px;
+width: 850px;
+margin-top: -49px;
+margin-left: 259px;
+}
+#divforprofilePicture{
+  height: 169px;
+width: 192px;
+margin-top: 108px;
+}
+#img{
+  width : 192px;
+  margin-top : 10px;
+}
+#confirmbtn{
+  display : none;
+}
+#divforleftside{
+  height: 204px;
+    width: 283px;
+    margin-left: 200px;
+    margin-top: -166px;
+}
+.form-control
+{
+  display: block;
+    width: 85%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   margin-top : 6px;
+}
+#divforrightside{
+  height: 221px;
+width: 299px;
+margin-left: 500px;
+margin-top: -201px;
+}
+#dob{
+  margin-top : 22px;
+}
+#dobipt{
+  font-family : "arial";
+}
+#createaccount
+{
+  color : white;
+  font-family : Arial;
+  background-color : #00CCCD;
+  margin-left: 924px;
+border: none;
+height: 38px;
+width: 126px;
+font-size: 15px;
+margin-top: 0px;
+}
+#warning{
+  color : #FF3E4D;
+  margin-left: 877px;
+padding-bottom: 10px;
+font-family: arial;
+display: none;
+}
+</style>
+<body id="bg">
+  <p id="heading">Join Listify today for free</p>
+  <div id="maindiv">
+  <div class="container" id="divforprofilePicture">
+  <img src="defaultProfilePicture.png" alt="defaultProfilePicture" id="img">
+  <form class="image-container" action='/upload1' method="post" enctype="multipart/form-data" id="profilepicform">
+    <div class="form-group">
+      <div class="col-xs-4 col-sm-3">
+        <input type="file" class="btn btn-warning" value="Upload Photo" name="profilePhoto" id="ppbtn">
+        <input type="submit" id="confirmbtn" class="btn btn-warning" value="Submit" style="display:none">
+      </div>
+      </div>
+  </form>
+  </div>
+  <div class="container" id="divforleftside">
+    USERNAME  <br>
+    <input type="text" class="form-control" id="usernameipt" placeholder="USERNAME"><br>
+    PASSWORD  <br>
+    <input type="password" class="form-control" id="passipt" placeholder="PASSWORD"><br>
+    EMAIL  <br>
+    <input type="text" class="form-control" id="emailipt" placeholder="EMAIL"><br>
+    </div>
+    <div id="divforrightside">
+    SELECT GENDER
+    <select name="gender" class="form-control" id="gender">
+        <optgroup label="Select Gender">
+        <option class="c1" value="Male" selected="">Male</option>
+        <option class="c1" value="Female">Female</option>
+        <option class="c1" value="Transgender">Transgender</option>
+    </optgroup>
+    </select>
+    <div id="dob">DATE OF BIRTH</div>
+    <input type="date" class="form-control" id="dobipt" placeholder="EMAIL"><br>
+    </div>
+  </div>
+  <div id="warning"> ERROR : FILL ALL DETAILS. </div>
+  <button type="submit" name="button" id="createaccount">Create Account</button>
+</body>
+<script src="newuser.js">
+  </script>
+</html>
